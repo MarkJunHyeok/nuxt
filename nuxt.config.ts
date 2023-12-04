@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     head: {
       title: 'Nuxt 3 Basic',
       meta: [{name: 'description', content: 'Nuxt 3 fore beginners'}],
-      link: [{rel: 'icon', href: '/icon.png'}]
-    }
+      link: [{rel: 'icon', href: '/icon.png'}],
+    },
+    pageTransition: {name: 'page', mode: 'out-in'}
   }
 })
