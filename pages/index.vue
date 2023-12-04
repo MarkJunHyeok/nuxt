@@ -3,7 +3,10 @@
 </script>
 
 <template>
-  <h1>Main Page</h1>
+  <NuxtLayout name="default">
+    <template #header>헤더</template>
+    <h1>Main Page</h1>
+  </NuxtLayout>
 </template>
 
 <style scoped>
