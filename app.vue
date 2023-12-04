@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const admin = false
+const admin = true
 const layout = admin ? 'custom' : 'default'
 </script>
 <template>

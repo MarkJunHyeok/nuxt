@@ -2,12 +2,14 @@
 import {definePageMeta} from "#imports";
 
 definePageMeta({
-  layout: 'custom'
+  layout: false
 })
 </script>
 
 <template>
-  <h1>About Page</h1>
+  <NuxtLayout>
+    <h1>About Page</h1>
+  </NuxtLayout>
 </template>
 
 <style scoped>
