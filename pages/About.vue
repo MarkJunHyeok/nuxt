@@ -8,19 +8,13 @@ definePageMeta({
 const title = ref('About Page');
 const description = ref('About description');
 
-useHead({
-  title: title,
-  meta: [
-    {
-      name: description,
-      content: 'About Page'
-    }
-  ]
-})
 </script>
 
 <template>
-    <h1>About Page</h1>
+  <Title>{{ title }}</Title>
+  <Meta :name="description" content="content"/>
+
+  <h1>About Page</h1>
   <input v-model="title">
   <input v-model="description">
 </template>
