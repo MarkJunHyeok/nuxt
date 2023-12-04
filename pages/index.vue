@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { count, inc, dec} = useCounter(100)
+const { $hello } = useNuxtApp()
 </script>
 
 <template>
@@ -10,6 +11,10 @@ const { count, inc, dec} = useCounter(100)
       <button @click="() => inc()">increase</button>
       <button @click="() => dec()">decrease</button>
     </div>
+  </div>
+
+  <div>
+    {{$hello('World')}}
   </div>
 </template>
 
