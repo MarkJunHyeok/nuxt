@@ -1,13 +1,17 @@
+<script setup lang="ts">
+const { count, inc, dec} = useCounter(100)
+</script>
+
 <template>
-  <h1>Main Page</h1>
-
-  <Coupon />
-
   <div>
-    <img src="~/assets/image/icon.png" alt="Jun icon" />
-    <img src="/icon.png" alt="Jun icon" />
+    <h1>Main Page</h1>
+    <div>Count:{{ count }}</div>
+    <div>
+      <button @click="() => inc()">increase</button>
+      <button @click="() => dec()">decrease</button>
+    </div>
   </div>
-</template>;
+</template>
 
 <style>
 @import '@/assets/css/style.css';
