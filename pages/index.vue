@@ -5,6 +5,7 @@
 
   <div>
     <img src="~/assets/image/icon.png" alt="Jun icon" />
+    <img src="/icon.png" alt="Jun icon" />
   </div>
 </template>;
 
