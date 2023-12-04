@@ -3,7 +3,8 @@
     <NuxtLink to="/">Home</NuxtLink><br>
     <NuxtLink to="/about">About</NuxtLink><br>
     <NuxtLink to="https://google.com" target="_blank">Google</NuxtLink><br>
-    <NuxtLink :to="{name : 'users-list' }" >User List</NuxtLink>
+    <NuxtLink :to="{name : 'users-list' }" >User List</NuxtLink><br>
+    <NuxtLink to="/posts">Post List</NuxtLink>
   </nav>
 </template>
 
