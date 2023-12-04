@@ -4,9 +4,8 @@
 
 <template>
   <div>
-    <slot name="header"/>
-    <nav>네비게이션</nav>
-    <slot />
+    <Navbar/>
+    <slot/>
   </div>
 </template>
 
