@@ -6,5 +6,12 @@ export default defineNuxtConfig({
       path: '~/components',
     }
   ],
-  css: ['/assets/css/style.css']
+  css: ['/assets/css/style.css'],
+  app: {
+    head: {
+      title: 'Nuxt 3 Basic',
+      meta: [{name: 'description', content: 'Nuxt 3 fore beginners'}],
+      link: [{rel: 'icon', href: '/icon.png'}]
+    }
+  }
 })
