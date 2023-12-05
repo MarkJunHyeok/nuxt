@@ -1,19 +1,18 @@
+<script setup>
+const { data: users } = await useFetch(
+    'https://jsonplaceholder.typicode.com/user/'
+);
+console.log('process');
+if (!users.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
+}
+</script>
+
 <template>
   <div>
-    <h1>에러 핸들링</h1>
-    <h2>Counter</h2>
-    <p>Count: {{ counter }}</p>
-    <div><button @click="inc">+</button></div>
+    <h1>유저 목록</h1>
+    <ul>
+      <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+    </ul>
   </div>
 </template>
-<script setup>
-const counter = ref(0);
-const inc = () => {
-  throw showError({
-    statusCode: 400,
-    statusMessage: 'Bad Request',
-    message: '에러 발생'
-  });
-  counter.value++;
-};
-</script>
