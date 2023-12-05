@@ -1,27 +1,16 @@
-<script setup lang="ts">
-const resetError = (error) => {
-  error.value = null
-}
-
-const someErrorLogger = (error) => {
-  console.log('someErrorLogger', error)
-}
-</script>
-
 <template>
   <div>
-    <h1>Users</h1>
-    <NuxtErrorBoundary @error="someErrorLogger">
-      <NuxtPage/>
-      <template #error="{ error }">
-        <p>{{ error }}</p>
-        <button @click="resetError(error)">Clear Error</button>
-      </template>
-    </NuxtErrorBoundary>
+    <h1>카운터</h1>
+    <h2>Counter</h2>
+    <p>Count: {{ counter }}</p>
+    <div><button @click="inc">+</button></div>
   </div>
-
 </template>
 
-<style scoped>
-
-</style>
+<script setup lang="ts">
+const counter = ref(0);
+const inc = () => {
+  throw createError('에러 발생');
+  counter.value++;
+};
+</script>
