@@ -9,7 +9,11 @@
 <script setup>
 const counter = ref(0);
 const inc = () => {
-  throw createError('에러 발생');
+  throw showError({
+    statusCode: 400,
+    statusMessage: 'Bad Request',
+    message: '에러 발생'
+  });
   counter.value++;
 };
 </script>
